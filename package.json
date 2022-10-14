@@ -4,7 +4,8 @@
   "description": "## The intention is: to make my JS skills up to date and repeat previous knowledges",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node ./index.js"
+    "start": "nodemon ./src/index.js",
+    "test": "mocha ./src/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,8 @@
   },
   "homepage": "https://github.com/Victor-Nikliaiev/js.info#readme",
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.19.3",
-    "@babel/node": "^7.19.1",
-    "@babel/preset-env": "^7.19.4",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.20"
   }
 }
