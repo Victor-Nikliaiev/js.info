@@ -1,5 +1,10 @@
 {
   "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "modules": true,
+    "spread": true,
+    "restParams": true
+  },
   "env": {
     "browser": true,
     "node": true,
@@ -8,5 +13,10 @@
   "rules": {
     "no-console": 0,
     "indent": 0
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
+
+// solve import errors from: https://github.com/AtomLinter/linter-eslint/issues/462
