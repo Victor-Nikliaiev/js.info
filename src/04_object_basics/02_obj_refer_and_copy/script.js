@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
-// module.exports = { test };
 import _ from "lodash";
 
 // let user = {
 //   name: "John",
 // };
 
-// function test(obj) {
-//   obj.name = "TEST";
-// }
+export function test(obj) {
+  obj.name = "TEST";
+}
 
 // let user = {
 //   name: "John",

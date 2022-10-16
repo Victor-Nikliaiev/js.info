@@ -1,6 +1,6 @@
-const { describe, it } = require("mocha");
-const { assert } = require("chai");
-const { test } = require("./script");
+import { describe, it } from "mocha";
+import { assert } from "chai";
+import { test } from "./script.js";
 
 describe("Test func", () => {
   let user = {
