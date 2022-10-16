@@ -1,1 +1,1 @@
-import "./04_object_basics/02_obj_refer_and_copy/script.js";
+import "./04_object_basics/03_garbage_collector/script.js";
