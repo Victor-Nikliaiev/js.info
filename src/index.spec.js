@@ -1,1 +1,1 @@
-import "./04_object_basics/02_obj_refer_and_copy/script.spec.js";
+import "../playground/01_deepClone_testing.spec.js";
