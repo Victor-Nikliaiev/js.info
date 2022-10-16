@@ -1,20 +1,44 @@
 const { describe, it } = require("mocha");
 const { assert } = require("chai");
-const { pow } = require("./script");
+const { isEmpty, sumSalaries, multiplyNumeric } = require("./script");
 
-describe("Raises x to power n", () => {
-  it("5 in the power of 1 equals 5", () => {
-    assert.equal(pow(5, 1), 5);
-    console.log(pow(5, 1));
+describe("IsEmpty Function", () => {
+  it("returns true for an empty object", () => {
+    assert.isTrue(isEmpty({}));
   });
 
-  it("5 in the power of 2 equals 25", () => {
-    assert.equal(pow(5, 2), 25);
-    console.log(pow(5, 2));
+  it("returns false if a property exists", () => {
+    assert.isFalse(isEmpty({ test: true }));
+  });
+});
+
+describe("Sum salaries function", () => {
+  it("returns sum of salaries in object", () => {
+    const obj = { John: 300, Ann: 200, Sim: 100 };
+    assert.equal(sumSalaries(obj), 600);
   });
 
-  it("5 in power of 3 equals 125", () => {
-    assert.equal(pow(5, 3), 125);
-    console.log(pow(5, 3));
+  it("returns 0 if there are no properties", () => {
+    assert.equal(sumSalaries({}), 0);
+  });
+});
+
+describe("Multiply all numeric properties by 2 function", () => {
+  it("multiplies all numeric by 2", () => {
+    let menu = {
+      width: 100,
+      height: 300,
+      title: "My title",
+    };
+
+    multiplyNumeric(menu);
+
+    assert.equal(menu.width, 200);
+    assert.equal(menu.height, 600);
+    assert.equal(menu.title, "My title");
+  });
+
+  it("returns nothing", () => {
+    assert.isUndefined(multiplyNumeric({}));
   });
 });

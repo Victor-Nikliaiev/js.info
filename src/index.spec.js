@@ -1,1 +1,1 @@
-require("./04_object_basics/01_objects/script.spec");
+require("./04_object_basics/02_obj_refer_and_copy/script.spec");
