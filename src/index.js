@@ -1,1 +1,1 @@
-import "./04_object_basics/08_objects_to_primitives/script.js";
+import "./05_data_types/01_methods_of_primitives/script.js";
