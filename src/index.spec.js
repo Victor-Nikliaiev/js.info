@@ -1,1 +1,1 @@
-import "./05_data_types/05_array_methods/script.spec.js";
+import "./05_data_types/07_map_set/script.spec.js";
