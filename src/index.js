@@ -1,1 +1,1 @@
-import "./05_data_types/05_array_methods/script.js";
+import "./05_data_types/06_iterable/script.js";
