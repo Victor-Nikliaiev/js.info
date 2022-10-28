@@ -1,1 +1,1 @@
-import "./05_data_types/07_map_set/script.js";
+import "./05_data_types/09_key_values_entries/script.js";

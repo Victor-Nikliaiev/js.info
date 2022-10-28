@@ -2,7 +2,7 @@
   "name": "javascript.info",
   "version": "1.0.0",
   "description": "## The intention is: to make my JS skills up to date and repeat previous knowledges",
-  "main": "index.js",
+  "main": "./index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/index.js",
