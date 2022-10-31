@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // let user = {
 //   name: "John",
 //   age: 30,

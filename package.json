@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "mocha ./src/index.spec.js"
+    "test": "mocha ./src/index.spec.js",
+    "node": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
