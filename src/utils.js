@@ -47,3 +47,42 @@ export function checkUniqueArrayElement(arr, element) {
 
   return isUnique;
 }
+
+export function getDateQuantity(timestamp) {
+  if (isNotCorrectType(timestamp)) {
+    throw new Error("Type of timestamp must be number");
+  }
+
+  const result = {};
+
+  const measureItems = {
+    years: 31_536_000 * 1000,
+    months: 2_419_200 * 1000,
+    days: 86_400 * 1000,
+    hours: 3600 * 1000,
+    minutes: 60 * 1000,
+    seconds: 1000,
+    milliseconds: 1,
+  };
+
+  Object.entries(measureItems).reduce((state, [stage, currentMeasure]) => {
+    return measure({ state, currentMeasure, stage });
+  }, timestamp);
+
+  if (!Object.keys(result).length) return { milliseconds: 0 };
+
+  return result;
+
+  function measure({ state, currentMeasure, stage }) {
+    if (state % currentMeasure !== state) {
+      result[stage] = Math.floor(state / currentMeasure);
+      return state % currentMeasure;
+    }
+
+    return state;
+  }
+
+  function isNotCorrectType(timestamp) {
+    return typeof timestamp !== "number";
+  }
+}
