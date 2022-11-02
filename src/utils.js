@@ -86,3 +86,41 @@ export function getDateQuantity(timestamp) {
     return typeof timestamp !== "number";
   }
 }
+
+export function bench(
+  { funcArray, circlesQuantity = 1e5, repeatTimes = 40 },
+  manager
+) {
+  const result = {};
+
+  funcArray.forEach((fn, index) => {
+    try {
+      result[index + 1] = getTotalTime(fn);
+    } catch ({ name, message }) {
+      result[index + 1] = `${name}: ${message}`;
+    }
+  });
+
+  return result;
+
+  function getTotalTime(fn) {
+    let totalTime = 0;
+
+    for (let i = 0; i < repeatTimes; i++) {
+      totalTime += getRunTime(fn);
+    }
+
+    return totalTime;
+  }
+
+  function getRunTime(fn) {
+    const start = Date.now();
+
+    for (let i = 0; i < circlesQuantity; i++) {
+      manager(fn);
+    }
+
+    const end = Date.now();
+    return end - start;
+  }
+}

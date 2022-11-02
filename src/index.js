@@ -1,1 +1,1 @@
-import "./05_data_types/12_json_methods/script.js";
+import "./06_advanced_working_with_funcs/01_recursion_and_stack/script.js";
