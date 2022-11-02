@@ -273,7 +273,9 @@ export function formatDate(date) {
 
   function modifyNumber(number) {
     let str = number.toString();
+
     if (str.length < 2) return "0" + str;
+
     return str;
   }
 
