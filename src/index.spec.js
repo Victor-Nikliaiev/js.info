@@ -1,1 +1,1 @@
-import "./05_data_types/11_date_and_time/script.spec.js";
+import "./06_advanced_working_with_funcs/03_closure/script.spec.js";
