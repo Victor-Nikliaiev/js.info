@@ -1,1 +1,1 @@
-import "./06_advanced_working_with_funcs/06_function_object/script.spec.js";
+import "./06_advanced_working_with_funcs/09_call_apply_decorators/script.spec.js";
