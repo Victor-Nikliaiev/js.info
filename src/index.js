@@ -1,1 +1,1 @@
-import "./06_advanced_working_with_funcs/09_call_apply_decorators/script.js";
+import "./06_advanced_working_with_funcs/10_binding_function/index.js";
