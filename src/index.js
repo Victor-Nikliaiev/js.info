@@ -1,1 +1,1 @@
-import "./08_prototype_inheritance/02_f_prototype/script.js";
+import "./08_prototype_inheritance/03_native_prototypes/script.js";
