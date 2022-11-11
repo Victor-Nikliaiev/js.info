@@ -1,1 +1,1 @@
-import "./07_object_props_configuration/02_property_accessors/script.js";
+import "./08_prototype_inheritance/script.js";
