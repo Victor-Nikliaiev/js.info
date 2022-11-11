@@ -5,7 +5,7 @@
 //   eats: true,
 // };
 
-import { bench } from "../utils.js";
+import { bench } from "../../utils.js";
 
 // let rabbit = {
 //   jump: true,
