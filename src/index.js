@@ -1,1 +1,1 @@
-import "./08_prototype_inheritance/04_prototype_methods/script.js";
+import "./09_classes/02_class_inheritance/script.js";
