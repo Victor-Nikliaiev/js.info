@@ -1,1 +1,1 @@
-import "./09_classes/05_extends_natives/script.js";
+import "./09_classes/06_instanceof/script.js";
