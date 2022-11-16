@@ -1,1 +1,1 @@
-import "./09_classes/06_instanceof/script.js";
+import "./09_classes/07_mixins/script.js";
