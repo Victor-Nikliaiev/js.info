@@ -1,1 +1,1 @@
-import "./10_error_handling/01_try_catch/script.js";
+import "./10_error_handling/02_custom_errors/script.js";
