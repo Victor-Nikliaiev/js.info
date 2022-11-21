@@ -43,6 +43,41 @@
 //   })
 //   .then(console.log);
 
-fetch("https://jsonplaceholder.typicode.com/todos/1")
-  .then(response => response.json())
-  .then(result => console.log(result.title));
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then(response => response.json())
+//   .then(result => console.log(result.title));
+
+// https://raw.githubusercontent.com/Victor-Nikliaiev/js.info/main/src/11_promises_async_await/03_promise_chaining/userExample.json
+
+// fetch("https://bit.ly/vicnic_json")
+//   .then(res => res.json())
+//   .then(user => fetch(`https://api.github.com/users/${user.name}`))
+//   .then(res => res.json())
+//   .then(githubUser => {
+//     // let img = document.createElement("img");
+//     // img.src = githubUser.avatar_url;
+//     // document.body.append(img);
+//     setTimeout(() => console.table([githubUser.avatar_url]), 3000);
+//   });
+
+fetch("https://bit.ly/vicnic_json")
+  .then(res => res.json())
+  .then(user => fetch(`https://api.github.com/users/${user.name}`))
+  .then(res => res.json())
+  .then(githubUser =>
+    new Promise(resolve => {
+      console.table([githubUser.avatar_url]);
+      setTimeout(() => {
+        console.log("URL removed!");
+        resolve(githubUser);
+      }, 3000);
+    }).then(
+      githubUser =>
+        new Promise(resolve => {
+          setTimeout(() => {
+            console.table(githubUser);
+            resolve(githubUser);
+          }, 3000);
+        })
+    )
+  );
