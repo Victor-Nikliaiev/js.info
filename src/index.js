@@ -1,1 +1,1 @@
-import "./11_promises_async_await/03_promise_chaining/script.js";
+import "./11_promises_async_await/04_promise_error_handling/script.js";
