@@ -1,1 +1,1 @@
-import "./11_promises_async_await/08_async_await/script.js";
+import "./12_generators_iterators/01_generators/script.js";
