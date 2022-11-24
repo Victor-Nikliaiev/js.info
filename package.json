@@ -5,9 +5,9 @@
   "main": "./index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./src/index.js",
+    "start": "nodemon --no-warnings ./src/index.js",
     "test": "mocha ./src/index.spec.js",
-    "node": "node ./src/index.js"
+    "node": "node --trace-warnings ./src/index.js"
   },
   "repository": {
     "type": "git",
