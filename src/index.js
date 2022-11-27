@@ -1,1 +1,1 @@
-import "./13_modules/01_modules_intro/script.js";
+import "./13_modules/03_dinamic_imports/script.js";
