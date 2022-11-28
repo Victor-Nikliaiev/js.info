@@ -1,1 +1,1 @@
-import "./14_miscellaneous/05_bigint/script.js";
+import "./01_js/14_miscellaneous/06_unicode/script.js";
