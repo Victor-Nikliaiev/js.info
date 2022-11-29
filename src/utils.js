@@ -124,3 +124,11 @@ export function bench(
     return end - start;
   }
 }
+
+export function delayDecorator(f, ms) {
+  return new Proxy(f, {
+    apply(target, thisArg, args) {
+      setTimeout(() => target.apply(thisArg, args), ms);
+    },
+  });
+}

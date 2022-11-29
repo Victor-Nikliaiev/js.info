@@ -1,1 +1,1 @@
-import "./01_js/14_miscellaneous/06_unicode/script.js";
+import "./02_ui/01_document/01_browser_environment/script.js";
