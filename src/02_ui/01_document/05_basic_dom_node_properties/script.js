@@ -124,7 +124,7 @@ for (let li of document.querySelectorAll("li")) {
   );
 
   let count =
-    innerElements.length - filteredArray.length || innerElements.length;
+    innerElements.length - filteredArray.length || filteredArray.length;
 
   console.log(`${title}: ${count} `);
 }
