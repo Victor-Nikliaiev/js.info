@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Environment</title>
+    <script src="script.js" type="module"></script>
+  </head>
+  <body
+    id="body"
+    type="..."
+    data-about="Elephant"
+    style="background: black; color: azure"
+  >
+    <!-- <input id="input" type="text" />
+    <input id="checkbox" type="checkbox" checked /> checkbox
+    <div id="elem" about="Elephant">Elephant</div>
+    <div id="div" style="color: red; font-size: 120%">Hello</div>
+    <a id="a" href="#hello">link</a>
+
+    mark the div to show "name" here -->
+    <div show-info="name"></div>
+    <!-- and age here -->
+    <div show-info="age"></div>
+
+    <style>
+      .order[data-order-state="new"] {
+        color: green;
+      }
+
+      .order[data-order-state="pending"] {
+        color: blue;
+      }
+
+      .order[data-order-state="cancelled"] {
+        color: red;
+      }
+    </style>
+
+    <div class="order" data-order-state="new">A new order</div>
+    <div class="order" data-order-state="pending">A pending order</div>
+    <div class="order" data-order-state="cancelled">A cancelled order</div>
+  </body>
+</html>
