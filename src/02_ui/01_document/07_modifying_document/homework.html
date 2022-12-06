@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Environment</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid black;
+        padding: 3px;
+        text-align: center;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: rgb(15, 15, 15);
+      }
+
+      #hh {
+        color: red;
+      }
+
+      #mm {
+        color: green;
+      }
+
+      #ss {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body style="background: black; color: azure">
+    <div id="container"></div>
+
+    <ul id="animals" hidden>
+      <li>
+        Animals
+        <ul>
+          <li>
+            Mammals
+            <ul>
+              <li>Cows</li>
+              <li>Donkeys</li>
+              <li>Dogs</li>
+              <li>Tigers</li>
+            </ul>
+          </li>
+          <li>
+            Other
+            <ul>
+              <li>Snakes</li>
+              <li>Birds</li>
+              <li>Lizards</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Fishes
+        <ul>
+          <li>
+            Aquarium
+            <ul>
+              <li>Guppy</li>
+              <li>Angelfish</li>
+            </ul>
+          </li>
+          <li>
+            Sea
+            <ul>
+              <li>Sea trout</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div id="calendar" hidden></div>
+
+    <div id="clock" hidden>
+      <!-- click on this button calls clockStart() -->
+      <div>
+        <span id="hh">hh</span>
+        : <span id="mm">mm</span> :
+        <span id="ss">ss</span>
+      </div>
+      <input type="button" onclick="clockStart()" value="Start" />
+
+      <!-- click on this button calls clockStop() -->
+      <input type="button" onclick="clockStop()" value="Stop" />
+    </div>
+
+    <ul id="ul" hidden>
+      <li id="one">1</li>
+      <li id="two">4</li>
+    </ul>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Smith</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Pete</td>
+          <td>Brown</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Ann</td>
+          <td>Lee</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
