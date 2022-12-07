@@ -1,0 +1,7 @@
+.notification {
+  position: absolute;
+  border: 1px solid wheat;
+  color: yellow;
+  background-color: red;
+  padding: 2px;
+}
