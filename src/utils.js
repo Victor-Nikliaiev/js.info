@@ -166,3 +166,26 @@ export function makeObservable(target, handlers = Symbol("handlers")) {
 
    */
 }
+
+export const scrollHeight = Math.max(
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
+);
+
+export function getScrollbarWidth() {
+  let div = document.createElement("div");
+
+  div.style.overflowY = "scroll";
+  div.style.width = "50px";
+  div.style.height = "50px";
+
+  document.body.append(div);
+  let scrollWidth = div.offsetWidth - div.clientWidth;
+
+  div.remove();
+  return scrollWidth;
+}
