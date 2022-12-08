@@ -1,0 +1,10 @@
+.example {
+  width: 300px;
+  padding: 10px;
+  margin: 0;
+  background-color: black;
+  color: wheat;
+  border: 15px solid green;
+  height: 50px;
+  overflow-y: scroll;
+}
