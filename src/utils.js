@@ -133,6 +133,33 @@ export function delayDecorator(f, ms) {
   });
 }
 
+export function throttleDecorator(func, ms) {
+  let isThrottled = false,
+    savedArgs,
+    savedThis;
+
+  function wrapper() {
+    if (isThrottled) {
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+    isThrottled = true;
+
+    func.apply(this, arguments);
+
+    setTimeout(function () {
+      isThrottled = false;
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
+  }
+
+  return wrapper;
+}
+
 export function makeObservable(target, handlers = Symbol("handlers")) {
   target[handlers] = [];
   target.observe = function (handler) {
@@ -190,29 +217,13 @@ export function getScrollbarWidth() {
   return scrollWidth;
 }
 
-export function throttleDecorator(func, ms) {
-  let isThrottled = false,
-    savedArgs,
-    savedThis;
+export function getDocumentCoords(elem) {
+  let box = elem.getBoundingClientRect();
 
-  function wrapper() {
-    if (isThrottled) {
-      savedArgs = arguments;
-      savedThis = this;
-      return;
-    }
-    isThrottled = true;
-
-    func.apply(this, arguments);
-
-    setTimeout(function () {
-      isThrottled = false;
-      if (savedArgs) {
-        wrapper.apply(savedThis, savedArgs);
-        savedArgs = savedThis = null;
-      }
-    }, ms);
-  }
-
-  return wrapper;
+  return {
+    top: box.top + window.pageYOffset,
+    right: box.right + window.pageXOffset,
+    bottom: box.bottom + window.pageYOffset,
+    left: box.left + window.pageXOffset,
+  };
 }

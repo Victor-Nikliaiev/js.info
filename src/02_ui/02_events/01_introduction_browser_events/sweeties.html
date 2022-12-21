@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweeties</title>
+    <style>
+      .menu {
+        cursor: pointer;
+      }
+
+      .title::before {
+        content: "▶ ";
+        color: rgb(114, 255, 114);
+      }
+
+      ul.open {
+        display: none;
+      }
+
+      .menu .open::before {
+        content: "▼ ";
+      }
+    </style>
+    <script src="sweeties.js" type="module"></script>
+  </head>
+  <body>
+    <div id="sweeties" class="menu">
+      <span class="title">Sweeties (click me)!</span>
+      <ul class="open">
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Honey</li>
+      </ul>
+    </div>
+  </body>
+</html>
