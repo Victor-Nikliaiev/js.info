@@ -39,3 +39,16 @@ var Menu = /** @class */ (function () {
     return Menu;
 }());
 new Menu(menu);
+document.addEventListener("click", function (ev) {
+    var target = ev.target;
+    if (target.dataset.counter != undefined) {
+        target.value++;
+    }
+});
+document.addEventListener("click", function (ev) {
+    var id = ev.target.dataset.toggleId;
+    if (!id)
+        return;
+    var elem = document.getElementById(id);
+    elem.hidden = !elem.hidden;
+});

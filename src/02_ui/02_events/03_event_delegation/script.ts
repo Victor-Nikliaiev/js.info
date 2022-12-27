@@ -54,3 +54,20 @@ class Menu {
 }
 
 new Menu(menu);
+
+document.addEventListener("click", (ev: Event) => {
+  let target = ev.target as HTMLButtonElement;
+
+  if (target.dataset.counter != undefined) {
+    (target.value as unknown as number)++;
+  }
+});
+
+document.addEventListener("click", (ev: Event) => {
+  const id = (ev.target as HTMLElement).dataset.toggleId;
+
+  if (!id) return;
+
+  let elem = document.getElementById(id) as HTMLElement;
+  elem.hidden = !elem.hidden;
+});
